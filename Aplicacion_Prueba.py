@@ -9,10 +9,10 @@ from firebase_admin import credentials, db
 #Inicializa proyecto en flask
 AppWeb = Flask(__name__, template_folder="Plantillas", static_folder="Archivos")
 BASE_PATH= os.getcwd()
-UPLOAD_PATH= os.path.join(BASE_PATH, "Flask", "Prueba Tecnica IT", "Subidas")
+UPLOAD_PATH= os.path.join(BASE_PATH, "Subidas")
 
 #Conexión a base de datos en firebase
-cred = credentials.Certificate("C:/Users/diego/Documents/Python/Flask/Prueba Tecnica IT/pruebatecnicait-firebase-adminsdk-mhm5y-6a0c8ab35a.json")
+cred = credentials.Certificate("pruebatecnicait-firebase-adminsdk-mhm5y-6a0c8ab35a.json")
 firebase_admin.initialize_app(cred, {'databaseURL':'https://pruebatecnicait-default-rtdb.firebaseio.com/'})
 
 @AppWeb.route("/", methods=["GET", "POST"])
