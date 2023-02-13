@@ -1,4 +1,4 @@
 Flask
 pandas
 firebase_admin
-guinicorn
+gunicorn
