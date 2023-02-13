@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+{% block body %}
+<!-- Project Two Row-->
+<div class="row gx-0 justify-content-center">
+    <div class="col-lg-6"><img class="img-fluid" src="Archivos/assets/img/demo-image-02.jpg" alt="..." /></div>
+    <div class="col-lg-6 order-lg-first">
+        <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-right">
+                    <h4 class="text-white">Sus datos</h4>
+                    <table>
+                        <tr>
+                            <th>Clave</th>
+                            <th>Valor</th>
+                        </tr>
+                        {% if datos2 %}
+                            {% for clave, valor in datos2.items() %}
+                            <tr>
+                                <td>{{ clave }}</td>
+                                <td>{{ valor }}</td>
+                            </tr>
+                            {% endfor %}
+                        {% else %}
+                            <tr>
+                                <td colspan="3">
+                                    <div class="alert alert-danger text-center">
+                                        Seleccione datos 
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endif %}
+                    </table>                                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}
